@@ -42,4 +42,13 @@ public class Phonebook {
         }
         return sb.toString();
     }
+
+    public String reverseLookup(String number){
+        for(String name : book.keySet()){
+            if (book.get(name).equalsIgnoreCase(number)){
+                return name;
+            }
+        }
+        return null;
+    }
 }

@@ -37,6 +37,14 @@ public class PhonebookTester {
         Assert.assertFalse("Remove method did not actually remove", pb.getBook().containsKey("Jenny"));
     }
 
+    @Test
+    public void reverseLookupTest(){
+        pb.add("Jenny", "302-867-5309");
+        Assert.assertEquals("Reverse Lookup did not return correct name", "Jenny", pb.reverseLookup("302-867-5309"));
+    }
+
+
+
 
 
 
